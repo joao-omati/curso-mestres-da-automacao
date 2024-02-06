@@ -1,0 +1,8 @@
+import pyautogui
+from time import sleep
+# posição algo - use o mouseInfo()
+#fazer algo com essa posição
+pyautogui.moveTo(591,493,duration=2) #vai demorar 2 segundos pra chegar no ponto(sempre coloque,nem que for 0,1)
+for i in range(222):  #vai clicar 100 vezes
+    sleep(0.1) #vai demorar 0.1 segundos ate o proximo click 
+    pyautogui.click()
