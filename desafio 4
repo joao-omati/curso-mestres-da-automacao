@@ -1,0 +1,9 @@
+#como sumular "rolagem" do mouse
+import pyautogui
+from time import sleep
+
+
+pyautogui.moveTo(1422,515,duration=1)
+for i in range(2):
+    pyautogui.scroll(-1000) #descer a pagina
+    sleep(1) #tempo pra descer
