@@ -1,0 +1,9 @@
+import pyautogui
+
+pyautogui.moveTo(1368,728, duration=1)
+pyautogui.click(button='right')
+pyautogui.moveTo(1566,610, duration=1)
+pyautogui.click()
+pyautogui.moveTo(1245,108, duration=1)
+pyautogui.click()
+pyautogui.click()
