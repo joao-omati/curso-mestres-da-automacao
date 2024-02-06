@@ -1,0 +1,11 @@
+#alertar e perdir informação no pyautogui
+import pyautogui
+email = pyautogui.prompt(text="digite seu email",title="informações obrigatorias")
+print(email)
+senha =pyautogui.password(text="digite sua senha:",title="dados de login",mask="*")
+print(senha)
+
+pyautogui.click(1295,380,duration=2)
+pyautogui.typewrite(email)
+pyautogui.press("enter") #pra dar u espaço 
+pyautogui.typewrite(senha)
