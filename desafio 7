@@ -1,0 +1,7 @@
+#como tirar print da tela ou parte dela
+import pyautogui
+#tirar print da tela inteira
+pyautogui.screenshot("tela.jpg")#importante especificar o tipo
+#tirar print de parte da tela
+pyautogui.screenshot("bloco.jpg",region=(1359,303,500,400))#depois da coordenada voce vai colocar quantos pixeis
+#pra direita e quantos para baixo
