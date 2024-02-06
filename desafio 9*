@@ -1,0 +1,36 @@
+import pyautogui
+import webbrowser
+import pyperclip
+from time import sleep
+#abrir uma aba em um navegador existente ou o navegador
+
+def escrever_frase(frase):
+    pyperclip.copy(frase)
+    pyautogui.hotkey("ctrl","v")
+
+webbrowser.open_new_tab("cursoautomacao.netlify.app/")
+pyautogui.moveTo(589,220,duration=2)
+pyautogui.scroll(-1100)
+pyautogui.move(400,0,duration = 1)
+pyautogui.click()
+pyautogui.typewrite("joao")
+pyautogui.move(0,50,duration=1)
+pyautogui.click()
+pyautogui.moveTo(858,223,duration=1)
+pyautogui.click()
+pyautogui.scroll(1100)
+sleep(1)
+pyautogui.scroll(-2400)
+pyautogui.moveTo(341,382,duration=1)
+pyautogui.click()
+pyautogui.moveTo(560,354,duration=1)
+pyautogui.click()
+pyautogui.scroll(1500)
+sleep(0.5)
+pyautogui.moveTo(349,256,duration=1)
+pyautogui.click()
+pyautogui.moveTo(1020,439,duration=1)
+pyautogui.click()
+escrever_frase("VOCÊ CONSEGUIU")
+pyautogui.move(0,50,duration=1)
+pyautogui.click()
