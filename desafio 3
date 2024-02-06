@@ -1,0 +1,10 @@
+#como pegar e arrastar algo para outro lugar
+import pyautogui
+
+for i in range(4): #repetir
+#mover ate uma coord
+    pyautogui.moveTo(1177,402,duration=2)
+#clicar
+#arrastar ate um  ponto #soltar
+    pyautogui.dragTo(1289,877,button = "left",duration=1.5)
+#repetir
