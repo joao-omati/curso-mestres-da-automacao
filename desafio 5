@@ -1,0 +1,13 @@
+#como digitar com Pyautogui #esse com acentuação e ç
+import pyautogui
+import pyperclip #pra acento e ç
+
+def escrever_frase(frase):
+    pyperclip.copy(frase)
+    pyautogui.hotkey("ctrl","v")
+#mover o mouse até o campo de digitar
+pyautogui.moveTo(1026,360,duration=1)
+#clicar no campo de digitar
+pyautogui.click(1026,360)
+#digitar a mesnagem
+escrever_frase("automação é incrivel")
