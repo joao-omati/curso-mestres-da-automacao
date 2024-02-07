@@ -53,7 +53,7 @@ while True:
         sleep(3)
         pyautogui.click(1568,834,duration=1)
         sleep(1)
-        pyautogui.typewrite('Gostei dessa foto!')
+        pyautogui.typewrite('batatinha')
         sleep(5)
         pyautogui.click(1715,832,duration=1)
         # 14 - Pausar por 24 horas
