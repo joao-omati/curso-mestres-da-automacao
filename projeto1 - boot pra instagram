@@ -1,0 +1,51 @@
+import pyautogui
+import webbrowser
+import pyperclip
+from time import sleep
+#bot de curtida e comentario no insta
+while true:
+    #entrar no site
+    webbrowser.open("http://instagram.com")
+    #clicar na parte de login e senha
+    pyautogui.moveTo(1326,684,duration = 1) #so caso voce ja esteja logado e apare se quer continuar
+    pyautogui.leftClick(1326,684,duration=1)
+
+
+
+    #clicar na parte de login e senha
+    #logar no site
+    login = pyautogui.locateCenterOnScreen("login.png")
+    pyautogui.click(login[0],login[1],duration=1)
+    pyautogui.typewrite("joao9902@gmail.com")
+    sleep(2)
+    senha = pyautogui.locateCenterOnScreen("senha.png")
+    pyautogui.click(senha[0],senha[1],duration=1)
+    pyautogui.typewrite("joao9902@")
+    sleep(2)
+    entrar = pyautogui.locateCenterOnScreen("entrar.png")
+    pyautogui.click(entrar[0],entrar[1],duration=1)
+    pyautogui.click(1125,640,duration=1)
+    sleep(5)
+    #ir na aba de pesquisa
+    pesquisa = pyautogui.locateCenterOnScreen("pesquisa.png")
+    pyautogui.click(pesquisa[0],pesquisa[1],duration=1)
+    sleep(2)
+    #pesquisar a conta
+    pyautogui.typewrite("nick")
+    sleep(2)
+    pyautogui.move(0,50,duration=1)
+    pyautogui.click()
+    sleep(2)
+
+    #ir ate a primeira postagem
+    pyautogui.click(785,945,duration = 1)
+    curtida = pyautogui.locateCenterOnScreen("curtido")
+    sleep(2)
+    if curtida is not None:
+        sleep(86400) #24 horas
+    elif curtida == None:
+        pyautogui.click(947,825,duration=1)
+        sleep(5)
+        pyautogui.click(1068,959,duration=1)
+        pyautogui.typewrite("batata")
+        pyautogui.hotkey("enter")
