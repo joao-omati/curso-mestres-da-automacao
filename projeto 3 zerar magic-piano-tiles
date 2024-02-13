@@ -1,0 +1,29 @@
+#entender os passos manuais parar depois criar o codigo
+#verificar se aparecer a barra preta e apertar na mesma
+
+import pyautogui
+import keyboard
+import win32api #para o mouse conseguir acompanhar
+import win32con
+from time import sleep
+
+pyautogui.click(1479,474, duration=1)
+
+
+def click(x, y):
+    win32api.SetCursorPos((x, y))
+    win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, 0, 0)
+    sleep(0.07)
+    win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, 0, 0)
+
+
+while keyboard.is_pressed('1') == False:   #ele vai verificar os 4 possiveis lugares em que a tecla pode estar e clica na mesma
+    if pyautogui.pixelMatchesColor(1364, 310, (0, 0, 0)):
+        click(1364, 310) #primeiro lugar
+    if pyautogui.pixelMatchesColor(1435, 306, (0, 0, 0)):
+        click(1435, 306) #segundo lugar
+    if pyautogui.pixelMatchesColor(1502, 298, (0, 0, 0)):
+        click(1502, 298) #terceiro lugar
+    if pyautogui.pixelMatchesColor(1568, 297, (0, 0, 0)):
+        click(1568, 297) #quarto lugar
+
