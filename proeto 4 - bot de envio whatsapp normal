@@ -1,0 +1,29 @@
+#abrir o aplciativo
+#lista de numeros
+#clicar um grupo de transmissão ou fazer um lop
+#selecionar os contaos
+#escrever e enviar a mensagem
+
+#escolher um contato
+#enviar mensagem para esse contato usando a api
+#repetir para outros contatos
+
+import webbrowser
+import pyautogui
+from time import sleep
+
+telefones = [5561999020417,5561123456789,5561123654789] 
+#ou extrair os numeros de um arquivooi de texo
+
+
+for telefone in telefones:
+    webbrowser.open(f"https://api.whatsapp.com/send?phone={telefone}")
+    sleep(5)
+    pyautogui.click(947,425,duration=2)
+    sleep(5)
+    pyautogui.click(1014,493,duration=2)
+    sleep(10)
+    pyautogui.click(852,959,duration=1) #meu zap web é bugado só que geralment e nao precisa desse passo
+    pyautogui.typewrite("gostaria de participar do nosso evento?(digite claro se gostarai de participar)")
+    sleep(7)
+    pyautogui.press("enter")
