@@ -1,0 +1,16 @@
+#entender os passos manuais parar depois criar o codigo
+#verificar se há um botao com a cor correspondente do circulo com aquela cor
+import pyautogui
+import keyboard
+from time import sleep
+
+while keyboard.is_pressed('1') == False:
+    if pyautogui.pixelMatchesColor(1314,885,(12,152,33)):
+        pyautogui.press('a') #verde
+        sleep(0.04)
+    if pyautogui.pixelMatchesColor(1419,887,(254,15,23)):
+        pyautogui.press('s') #vermelho
+        sleep(0.04)
+    if pyautogui.pixelMatchesColor(1525,891,(244,244,64)):
+        pyautogui.press('j')  #amarelo
+        sleep(0.04) 
